@@ -4,8 +4,12 @@
 # System updates and installing some useful tools
 echo "###################################################### Starting System Update ########################################"
 sudo apt-get update
+echo "UPDATE DONE #################################################"
 sudo apt-get -y upgrade
-sudo apt-get -y install wget curl killall make pip pip3 rsync openssh-server openssh-client software-properties-common
+echo "UPGRADE DONE #################################################"
+sudo apt-get -y install wget curl rsync openssh-server openssh-client software-properties-common
+sudo apt install psmisc make python3-pip
+echo "INSTALL DONE ###################################################"
 sudo apt-get update --allow-unauthenticated --allow-insecure-repositories
 echo "###################################################### Ending System Update ########################################"
 

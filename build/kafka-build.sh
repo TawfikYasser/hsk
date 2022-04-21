@@ -15,10 +15,8 @@ echo "###################################################### Ending Zookeeper In
 echo "###################################################### Starting Zookeeper Confs ########################################"
 mkdir zkData/
 
-ls
-
 # Zookeeper confs
-cd home/hsk/zookeeper/conf
+cd /home/hsk/zookeeper/conf
 
 cat <<\EOF >> /home/hsk/zookeeper/conf/zoo.cfg
 tickTime=2000

@@ -29,12 +29,11 @@ sudo apt-get install build-essential
 
 cd /home/hsk/Python-3.7.12/
 sudo ./configure --enable-optimizations
+sudo apt install make
 sudo make altinstall
 echo "###################################################### Ending Spark confs ########################################"
 
 # Installing pip and pyspark
 echo "###################################################### Starting Pip and PySpark Installation ########################################"
-sudo apt-get install python3-pip
-
-pip install pyspark
+python3-pip install pyspark
 echo "###################################################### Ending Pip and PySpark Installation ########################################"

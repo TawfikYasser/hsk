@@ -1,0 +1,126 @@
+{
+    "Id": "sha256:2a88d245423c03d5b0c88b86d7c0196921c346f1e8f965eb49b797602fef392d",
+    "RepoTags": [
+        "hsk:latest"
+    ],
+    "RepoDigests": [],
+    "Parent": "sha256:1f262e926f59691235bf180a5b13da783d1c4591d0ec2f0a27a840612c93a9f4",
+    "Comment": "",
+    "Created": "2022-04-20T23:56:39.309971525Z",
+    "Container": "025e9e547b98044a615acb9c58f393b9e7c3e233fe2803486a53785510a3547a",
+    "ContainerConfig": {
+        "Hostname": "025e9e547b98",
+        "Domainname": "",
+        "User": "root",
+        "AttachStdin": false,
+        "AttachStdout": false,
+        "AttachStderr": false,
+        "Tty": false,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Env": [
+            "PATH=/home/hsk/hadoop/sbin::/home/hsk/hadoop/bin:/home/hsk/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "JAVA_HOME=/home/hsk/java",
+            "HADOOP_HOME=/home/hsk/hadoop",
+            "HADOOP_CONF_DIR=/home/hsk/hadoop/etc/hadoop",
+            "HADOOP_MAPRED_HOME=/home/hsk/hadoop",
+            "HADOOP_COMMON_HOME=/home/hsk/hadoop",
+            "HADOOP_HDFS_HOME=/home/hsk/hadoop",
+            "YARN_HOME=/home/hsk/hadoop",
+            "HADOOP_COMMON_LIB_NATIVE_DIR=/home/hsk/hadoop/lib/native",
+            "HADOOP_OPTS=-Djava.library.path=/home/hsk/hadoop/lib"
+        ],
+        "Cmd": [
+            "/bin/sh",
+            "-c",
+            "#(nop) ",
+            "CMD [\"bash\"]"
+        ],
+        "Image": "sha256:1f262e926f59691235bf180a5b13da783d1c4591d0ec2f0a27a840612c93a9f4",
+        "Volumes": null,
+        "WorkingDir": "/home/hsk",
+        "Entrypoint": [
+            "/bin/bash",
+            "-c"
+        ],
+        "OnBuild": null,
+        "Labels": {}
+    },
+    "DockerVersion": "20.10.14",
+    "Author": "",
+    "Config": {
+        "Hostname": "",
+        "Domainname": "",
+        "User": "root",
+        "AttachStdin": false,
+        "AttachStdout": false,
+        "AttachStderr": false,
+        "Tty": false,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Env": [
+            "PATH=/home/hsk/hadoop/sbin::/home/hsk/hadoop/bin:/home/hsk/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "JAVA_HOME=/home/hsk/java",
+            "HADOOP_HOME=/home/hsk/hadoop",
+            "HADOOP_CONF_DIR=/home/hsk/hadoop/etc/hadoop",
+            "HADOOP_MAPRED_HOME=/home/hsk/hadoop",
+            "HADOOP_COMMON_HOME=/home/hsk/hadoop",
+            "HADOOP_HDFS_HOME=/home/hsk/hadoop",
+            "YARN_HOME=/home/hsk/hadoop",
+            "HADOOP_COMMON_LIB_NATIVE_DIR=/home/hsk/hadoop/lib/native",
+            "HADOOP_OPTS=-Djava.library.path=/home/hsk/hadoop/lib"
+        ],
+        "Cmd": [
+            "bash"
+        ],
+        "Image": "sha256:1f262e926f59691235bf180a5b13da783d1c4591d0ec2f0a27a840612c93a9f4",
+        "Volumes": null,
+        "WorkingDir": "/home/hsk",
+        "Entrypoint": [
+            "/bin/bash",
+            "-c"
+        ],
+        "OnBuild": null,
+        "Labels": null
+    },
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 2501252347,
+    "VirtualSize": 2501252347,
+    "GraphDriver": {
+        "Data": {
+            "LowerDir": "/var/lib/docker/overlay2/0123d6de2a8cd578b931b530d82d072d4b439b25879e6558e16f58da8211f11c/diff:/var/lib/docker/overlay2/a369e1046e9f9c68d1b9e586a4aa703469f327ad3bb9a1ab54c6d0448aeea03a/diff:/var/lib/docker/overlay2/39d0bfec63f66d99a87560051b00d5f5ba8d8bde6da363b386b599ea7af88899/diff:/var/lib/docker/overlay2/92424ebf3930ef9c35b8050b59e4b31d02339a935c1a0018908f0455103a5fe6/diff:/var/lib/docker/overlay2/4690b130d43253b704430370d2df4136856cd30fe0092468b009d3664481e550/diff:/var/lib/docker/overlay2/0a2c8d4d850c9de8bf91bc06809d2b72fec0c06a56cfa2ef51f1280eb7e80bec/diff:/var/lib/docker/overlay2/a69d5dd527d667aa307b8b137215b53058b0da72dc27c19f3fd6ff1ba12394d7/diff:/var/lib/docker/overlay2/d688445d119a50980c47c169a7916f456cf0229d833f6023b57034cc21c8fd76/diff:/var/lib/docker/overlay2/3751e581823e34c36b57ecf75d8c07f9ba157311486258fa1e9561a2897b2d23/diff:/var/lib/docker/overlay2/c001a0911166e5b3b85745da58b3258a1d479665e95a95028c1d26bd041a9b5f/diff:/var/lib/docker/overlay2/9f162d4986ca2c1dc7ea7287a6e2f06d6ba4755a5d052f7e8f215b9acc9306fe/diff:/var/lib/docker/overlay2/59ab1a5818cd67851393475ac7f2b87bb71f8015c1323bb2791bd6221e5d40c1/diff:/var/lib/docker/overlay2/bb7c2a644230c8af6298df38029e961b06ebbe8f08dccfc1d53c4c1a53966e65/diff:/var/lib/docker/overlay2/e1ddd2387dfe5f5c87d340e741f1fa55b74e3c2e963a3b9acb2fc1711756c2ec/diff:/var/lib/docker/overlay2/9404492d554db7359a3a8e303af18b6c976251d7cf4de25f5e5ebbf2f7c586e1/diff:/var/lib/docker/overlay2/05634a64d827530d573014f986ba77a28a4623f8eba92e3a657bb2b616591320/diff",
+            "MergedDir": "/var/lib/docker/overlay2/e06596ce7409ae4151e13fca42dda7be84e5600a2244028c882702d414909ff5/merged",
+            "UpperDir": "/var/lib/docker/overlay2/e06596ce7409ae4151e13fca42dda7be84e5600a2244028c882702d414909ff5/diff",
+            "WorkDir": "/var/lib/docker/overlay2/e06596ce7409ae4151e13fca42dda7be84e5600a2244028c882702d414909ff5/work"
+        },
+        "Name": "overlay2"
+    },
+    "RootFS": {
+        "Type": "layers",
+        "Layers": [
+            "sha256:c5ec52c98b3193052e15d783aca2bef10d8d829fa0d58fedfede511920b8f997",
+            "sha256:79c7b42e9848d8dc94e69651d5b4bfadc67e684e47ed85d26484c169839fe7f8",
+            "sha256:0bb0b31538777c04af5af5c40807e0965607556ce02b138216367b2935a25247",
+            "sha256:2071b3519fb67f90e8e0ccd4781641638418474e846ce92186368e228164ff6f",
+            "sha256:e173cec961c75e46890ab46957b5b3c5a18a6cad24f5d967fb95eec64428dba8",
+            "sha256:ab6be14e9257520579523aac7a05ba9075e5938fe2ce4290f4d3b107ffda237d",
+            "sha256:dcb2b9c535221b091ccc6ad007491177bf199bda0c6d3ca5b63e555f2f5e1c86",
+            "sha256:abb367813012bda0f88e3053eaac021979cd000c16de9e4644e3779842980bd5",
+            "sha256:5fb2e07feab9d9f5fca2d78aabeac15d43feb69c7b1020f8df229c3b00218358",
+            "sha256:59ee3a25dafc13fd7ed0441288d65b5c2be7b225290b407ca1c80df235e4d7ca",
+            "sha256:3f61ef360f30a8d9e2a173f8c00f7edfb12c7c7bca45cc3e4df2fae3456d11ce",
+            "sha256:af660470609f9974e0e320f9cb4a892ea5954556333fa033a811a64549386d9c",
+            "sha256:c456d46c8966244d854232f0faea14abd3d0ed5eac13644f11306f02871719fc",
+            "sha256:d1c16196ce094e9a1dd2d3018a2f0e8d72e35b9a6ce8cc49fda52c1dc2875776",
+            "sha256:10a65b68079564ef1e73e5968e1b2d8979bb0a6c6e5901db97f05fac3dea060a",
+            "sha256:a26fb956c8de043bef5205dd780c8d376f72e30de76fcc8d139cfdc60fc0c8ff",
+            "sha256:82cb4a87606002a5e23adf552f62f8256f4c5541c049d02a8390e532ee879a79"
+        ]
+    },
+    "Metadata": {
+        "LastTagTime": "2022-04-21T01:56:39.352307711+02:00"
+    },
+    "CreatedTime": 1650498999309,
+    "Containers": {}
+}
