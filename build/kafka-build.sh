@@ -34,6 +34,13 @@ tar -xzvf kafka_2.12-3.1.0.tgz
 mv kafka_2.12-3.3.1/ kafka/ 
 rm kafka_2.12-3.1.0.tgz
 mkdir kafka-logs/
+
+# need for standalone server
+echo "listeners=PLAINTEXT://localhost:9092" >> /home/hsk/kafka/config/server.properties
+
+# setup paths
+sudo echo 'export PATH=$PATH:/home/hsk/kafka/bin' >> ~/.bashrc 
+
 echo "###################################################### Ending Kafka Installation ########################################"
 
 echo "All builds are done"

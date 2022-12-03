@@ -25,6 +25,10 @@ COPY /build/hadoop-build.sh /home/hsk/
 COPY /build/spark-build.sh /home/hsk/
 COPY /build/kafka-build.sh /home/hsk/
 
+# Copying launchers into the image
+COPY /start/hadoop-start.sh /home/hsk/
+COPY /start/kafka-start.sh /home/hsk/
+
 # Copyting the hadoop site files into the image
 COPY /src/core-site.xml /home/hsk/src/
 COPY /src/hdfs-site.xml /home/hsk/src/
@@ -49,7 +53,9 @@ RUN bash ./spark-build.sh
 RUN python3 --version
 RUN bash ./kafka-build.sh
 
-
+# Start  Hadoop, Kafka
+RUN bash ./hadoop-start.sh
+RUN bash ./kafka-start.sh
 
 # Using the bash open bash on the run of the container
 ENTRYPOINT [ "/bin/bash", "-c" ]
