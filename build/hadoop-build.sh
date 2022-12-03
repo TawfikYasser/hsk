@@ -7,8 +7,8 @@ sudo apt-get update
 echo "UPDATE DONE #################################################"
 sudo apt-get -y upgrade
 echo "UPGRADE DONE #################################################"
-sudo apt-get -y install wget curl rsync openssh-server openssh-client software-properties-common
-sudo apt install psmisc make python3-pip
+sudo apt-get install -y wget curl rsync openssh-server openssh-client software-properties-common
+sudo apt-get install -y psmisc make python3-pip
 echo "INSTALL DONE ###################################################"
 sudo apt-get update --allow-unauthenticated --allow-insecure-repositories
 echo "###################################################### Ending System Update ########################################"
@@ -18,7 +18,7 @@ echo "###################################################### Starting Java Insta
 sudo wget https://files-cdn.liferay.com/mirrors/download.oracle.com/otn-pub/java/jdk/8u221-b11/jdk-8u221-linux-x64.tar.gz
 tar -xvzf jdk-8u221-linux-x64.tar.gz
 mv jdk1.8.0_221/ java
-rm -r jdk-8u221-linux-x64.tar.gz
+rm jdk-8u221-linux-x64.tar.gz
 
 cd /home/hsk
 
@@ -58,7 +58,7 @@ cd /home/hsk
 sudo wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
 tar -xvzf hadoop-3.3.1.tar.gz
 mv hadoop-3.3.1/ hadoop
-rm -r hadoop-3.3.1.tar.gz
+rm hadoop-3.3.1.tar.gz
 
 # Disabling ipv6
 echo 'net.ipv6.conf.all.disable_ipv6=1' >> /etc/sysctl.conf
