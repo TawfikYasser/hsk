@@ -5,10 +5,10 @@ cd /home/hsk
 
 # Installing Spark
 echo "###################################################### Starting Spark Installation ########################################"
-sudo wget https://archive.apache.org/dist/spark/spark-3.2.1/spark-3.2.1-bin-hadoop3.2.tgz
-tar -xvzf spark-3.2.1-bin-hadoop3.2.tgz
-mv spark-3.2.1-bin-hadoop3.2/ spark/
-rm -r spark-3.2.1-bin-hadoop3.2.tgz
+sudo wget https://archive.apache.org/dist/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3-scala2.13.tgz
+tar -xvzf spark-3.3.1-bin-hadoop3-scala2.13.tgz
+mv spark-3.3.1-bin-hadoop3-scala2.13/ spark/
+rm -r spark-3.3.1-bin-hadoop3-scala2.13.tgz
 echo "###################################################### Ending Spark Installation ########################################"
 
 # Installing Python

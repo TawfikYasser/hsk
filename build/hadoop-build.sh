@@ -15,10 +15,10 @@ echo "###################################################### Ending System Updat
 
 # Installing java
 echo "###################################################### Starting Java Installation ########################################"
-sudo wget https://files-cdn.liferay.com/mirrors/download.oracle.com/otn-pub/java/jdk/8u221-b11/jdk-8u221-linux-x64.tar.gz
-tar -xvzf jdk-8u221-linux-x64.tar.gz
-mv jdk1.8.0_221/ java
-rm jdk-8u221-linux-x64.tar.gz
+sudo wget https://files-cdn.liferay.com/mirrors/download.oracle.com/otn-pub/java/jdk/11.0.13+10/bdde8881e2e3437baa70044f884d2d67/jdk-11.0.13_linux-x64_bin.tar.gz
+tar -xvzf jdk-11.0.13_linux-x64_bin.tar.gz
+mv jdk-11.0.13_linux-x64_bin/ java
+rm jdk-11.0.13_linux-x64_bin.tar.gz
 
 cd /home/hsk
 

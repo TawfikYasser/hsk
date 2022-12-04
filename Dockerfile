@@ -1,5 +1,5 @@
-# Using ubuntu version 20.04
-FROM ubuntu:20.04
+# Using ubuntu version 22.04
+FROM ubuntu:22.04
 
 USER root
 
@@ -26,8 +26,7 @@ COPY /build/spark-build.sh /home/hsk/
 COPY /build/kafka-build.sh /home/hsk/
 
 # Copying launchers into the image
-COPY /start/hadoop-start.sh /home/hsk/
-COPY /start/kafka-start.sh /home/hsk/
+COPY /start /home/hsk
 
 # Copyting the hadoop site files into the image
 COPY /src/core-site.xml /home/hsk/src/
