@@ -31,7 +31,7 @@ cd /home/hsk
 echo "###################################################### Starting Kafka Installation ########################################"
 wget https://archive.apache.org/dist/kafka/3.1.0/kafka_2.12-3.1.0.tgz
 tar -xzvf kafka_2.12-3.1.0.tgz
-mv kafka_2.12-3.3.1/ kafka/ 
+mv kafka_2.12-3.1.0/ kafka/ 
 rm kafka_2.12-3.1.0.tgz
 mkdir kafka-logs/
 
