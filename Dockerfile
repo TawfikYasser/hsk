@@ -53,10 +53,6 @@ RUN bash ./spark-build.sh
 RUN python3 --version
 RUN bash ./kafka-build.sh
 
-# Start  Hadoop, Kafka
-RUN bash ./hadoop-start.sh
-RUN bash ./kafka-start.sh
-
 # Using the bash open bash on the run of the container
 ENTRYPOINT [ "/bin/bash", "-c" ]
 CMD ["bash"]

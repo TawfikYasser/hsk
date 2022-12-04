@@ -26,13 +26,13 @@ sudo echo 'export JAVA_HOME=/home/hsk/java' >> ~/.bashrc
 sudo echo 'export PATH=$PATH:/home/hsk/java/bin' >> ~/.bashrc 
 
 # Java environment variables
-sudo update-alternatives --install "/usr/bin/java" "java" "/home/hsk/java/bin/java" 1
-sudo update-alternatives --config java
-sudo update-alternatives --install "/usr/bin/javac" "javac" "/home/hsk/java/bin/javac" 1
-sudo update-alternatives --config javac
-sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/home/hsk/java/bin/javaws" 1
-sudo update-alternatives --config javaws
-sudo update-alternatives --set java /home/hsk/java/bin/java
+sudo yes '' | update-alternatives --install "/usr/bin/java" "java" "/home/hsk/java/bin/java" 1
+sudo yes '' | update-alternatives --config java
+sudo yes '' | update-alternatives --install "/usr/bin/javac" "javac" "/home/hsk/java/bin/javac" 1
+sudo yes '' | update-alternatives --config javac
+sudo yes '' | update-alternatives --install "/usr/bin/javaws" "javaws" "/home/hsk/java/bin/javaws" 1
+sudo yes '' | update-alternatives --config javaws
+sudo yes '' | update-alternatives --set java /home/hsk/java/bin/java
 
 echo "###################################################### Java Done ########################################"
 
@@ -45,7 +45,7 @@ echo "###################################################### Firewall disabled #
 echo "###################################################### Starting ssh ########################################"
 service ssh restart
 
-ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+yes '' | ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod og-wx ~/.ssh/authorized_keys
 
@@ -55,7 +55,7 @@ echo "###################################################### ssh and system upda
 # Installing Hadoop
 echo "###################################################### Starting Hadoop Installation ########################################"
 cd /home/hsk
-sudo wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
+sudo wget https://archive.apache.org/dist/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
 tar -xvzf hadoop-3.3.1.tar.gz
 mv hadoop-3.3.1/ hadoop
 rm hadoop-3.3.1.tar.gz
