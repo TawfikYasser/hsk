@@ -1,12 +1,10 @@
-# hskj
+# hskj [![Docker Pulls](https://badgen.net/docker/pulls/alekseygur/hskj?icon=docker&label=pulls)](https://hub.docker.com/r/alekseygur/hskj/) [![Image Size](https://badgen.net/docker/size/alekseygur/hskj?icon=docker&label=image%20size)](https://hub.docker.com/r/alekseygur/hskj/)
 
 ![HSK IMAGE](/hsk_header.png)
 
 Docker of {Hadoop, Spark, Kafka, Jupyter}
 
 ## Docker Image for running Hadoop, Spark, Kafka, and Jupyter on the same node.
-
-<img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" />
 
 Visit dockerhub container page: [alekseygur/hskj](https://hub.docker.com/r/alekseygur/hskj)
 
