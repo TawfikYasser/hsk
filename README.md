@@ -27,16 +27,22 @@ Based on a docker image: `Ubuntu:22.04`
 - hsk-build-log.txt: shows the full log for the build process.
 - hsk-inspection.json: the inspection of the image.
 
-### Build
+### Run from docker hub
 
 ```bash
-docker build -t hsk:latest .
+docker run --network=host -dit --name hskj alekseygur/hskj
+```
+
+### Build manually
+
+```bash
+docker build -t hskj:latest .
 ```
 
 ### Run
 
 ```bash
-docker run --network=host -dit --name hsk hsk
+docker run --network=host -dit --name hskj hskj
 ```
 
 ### Using JupyterLab
