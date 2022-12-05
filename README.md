@@ -2,9 +2,13 @@
 
 ![HSK IMAGE](/hsk_header.png)
 
-Docker of {Hadoop, Spark, Kafka}
+Docker of {Hadoop, Spark, Kafka, Jupyter}
 
-## Docker Image for running Hadoop, Spark, and Kafka on the same node.
+## Docker Image for running Hadoop, Spark, Kafka, and Jupyter on the same node.
+
+<img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" />
+
+Visit dockerhub container page: [alekseygur/hskj](https://hub.docker.com/r/alekseygur/hskj)
 
 ### Versions
 
