@@ -1,6 +1,6 @@
 # Need to setup "listeners" for standalone server
 # Or it'll trigger error "Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)"
-echo "listeners=PLAINTEXT://localhost:9092" >> ./kafka/config/server.properties  
+# echo "listeners=PLAINTEXT://localhost:9092" >> ./kafka/config/server.properties  
 
 
 ./kafka/bin/kafka-server-start.sh -daemon ./kafka/config/server.properties

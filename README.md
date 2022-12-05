@@ -9,19 +9,47 @@ Docker of {Hadoop, Spark, Kafka}
 ### Versions
 
 - Hadoop: 3.3.1
-- Java: 8u221
-- Spark: 3.2.1
-- Python: 3.7.12
-- Kafka: 2.12-3.1.0
+- Java: 11.0.13
+- Spark: 3.3.1
+- Kafka: 2.12-3.3.1
 - Zookeeper: 3.4.6
+- Python: latest (for Ubuntu: 22.04)
+- JupyterLab: latest
 
-Based on a docker image: `ubuntu:20.04`
+Based on a docker image: `Ubuntu:22.04`
 
 ### Attached files
 
 - build files: used to build the image.
 - src files: belongs to hadoop installation.
+- start files: launchers for Kafka, Hadoop, JupyterLab.
 - bin files: contains sample examples for running hadoop/spark/kafka
 - hsk-build-log.txt: shows the full log for the build process.
 - hsk-inspection.json: the inspection of the image.
 
+### Build
+
+```bash
+docker build -t hsk:latest .
+```
+
+### Run
+
+```bash
+docker run --network=host -dit --name hsk hsk
+```
+
+### Using JupyterLab
+
+Visit page with code example hdfs+spark+kafka: [http://localhost:8888/lab/tree/example.ipynb](http://localhost:8888/lab/tree/example.ipynb)
+
+Password: admin
+
+### Using python
+
+Every script that uses pyspark [should](https://stackoverflow.com/questions/34998433/create-pyspark-kernel-for-jupyter) starts from this:
+
+```bash
+import findspark
+findspark.init()
+```

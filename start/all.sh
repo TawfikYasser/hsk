@@ -1,6 +1,6 @@
 #!/bin/bash
-# Starting jupyter-lab server
+# Starting all apps
 
-./hadoop-start.sh
-./kafka-start.sh
-./jupyter-start.sh
+/home/hsk/start/hadoop.sh
+/home/hsk/start/kafka.sh
+/home/hsk/start/jupyter.sh

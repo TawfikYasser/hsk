@@ -3,36 +3,36 @@
 
 # System updates and installing some useful tools
 echo "###################################################### Starting System Update ########################################"
-sudo apt-get update
+sudo apt update
 echo "UPDATE DONE #################################################"
-sudo apt-get -y upgrade
+sudo apt -y -qq upgrade
 echo "UPGRADE DONE #################################################"
-sudo apt-get install -y wget curl rsync openssh-server openssh-client software-properties-common
-sudo apt-get install -y psmisc make python3-pip
+sudo apt install -y -qq wget curl rsync openssh-server openssh-client software-properties-common
+sudo apt install -y -qq psmisc make python3-pip
 echo "INSTALL DONE ###################################################"
-sudo apt-get update --allow-unauthenticated --allow-insecure-repositories
+sudo apt update --allow-unauthenticated --allow-insecure-repositories
 echo "###################################################### Ending System Update ########################################"
 
 # Installing java
 echo "###################################################### Starting Java Installation ########################################"
-sudo wget https://files-cdn.liferay.com/mirrors/download.oracle.com/otn-pub/java/jdk/11.0.13+10/bdde8881e2e3437baa70044f884d2d67/jdk-11.0.13_linux-x64_bin.tar.gz
-tar -xvzf jdk-11.0.13_linux-x64_bin.tar.gz
-mv jdk-11.0.13_linux-x64_bin/ java
+sudo wget -q --no-verbose --show-progress --progress=dot:mega https://files-cdn.liferay.com/mirrors/download.oracle.com/otn-pub/java/jdk/11.0.13+10/bdde8881e2e3437baa70044f884d2d67/jdk-11.0.13_linux-x64_bin.tar.gz
+tar -xzf jdk-11.0.13_linux-x64_bin.tar.gz
+mv jdk-11.0.13/ java
 rm jdk-11.0.13_linux-x64_bin.tar.gz
 
 cd /home/hsk
 
-sudo echo 'export JAVA_HOME=/home/hsk/java' >> ~/.bashrc 
-sudo echo 'export PATH=$PATH:/home/hsk/java/bin' >> ~/.bashrc 
+# sudo echo 'export JAVA_HOME=/home/hsk/java' >> ~/.bashrc 
+# sudo echo 'export PATH=$PATH:/home/hsk/java/bin' >> ~/.bashrc 
 
 # Java environment variables
-sudo yes '' | update-alternatives --install "/usr/bin/java" "java" "/home/hsk/java/bin/java" 1
-sudo yes '' | update-alternatives --config java
-sudo yes '' | update-alternatives --install "/usr/bin/javac" "javac" "/home/hsk/java/bin/javac" 1
-sudo yes '' | update-alternatives --config javac
-sudo yes '' | update-alternatives --install "/usr/bin/javaws" "javaws" "/home/hsk/java/bin/javaws" 1
-sudo yes '' | update-alternatives --config javaws
-sudo yes '' | update-alternatives --set java /home/hsk/java/bin/java
+sudo yes '' | update-alternatives --quiet --install "/usr/bin/java" "java" "/home/hsk/java/bin/java" 1
+sudo yes '' | update-alternatives --quiet --config java
+sudo yes '' | update-alternatives --quiet --install "/usr/bin/javac" "javac" "/home/hsk/java/bin/javac" 1
+sudo yes '' | update-alternatives --quiet --config javac
+sudo yes '' | update-alternatives --quiet --install "/usr/bin/javaws" "javaws" "/home/hsk/java/bin/javaws" 1
+sudo yes '' | update-alternatives --quiet --config javaws
+sudo yes '' | update-alternatives --quiet --set java /home/hsk/java/bin/java
 
 echo "###################################################### Java Done ########################################"
 
@@ -42,21 +42,19 @@ echo "###################################################### Firewall disabling 
 echo "###################################################### Firewall disabled ########################################"
 
 # Defining the ssh for hadoop to use
-echo "###################################################### Starting ssh ########################################"
-service ssh restart
+# echo "###################################################### Starting ssh ########################################"
+# yes '' | ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+# cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+# chmod og-wx ~/.ssh/authorized_keys
 
-yes '' | ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
-cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-chmod og-wx ~/.ssh/authorized_keys
-
-apt-get update
-echo "###################################################### ssh and system update confirmation done ########################################"
+# sudo service ssh restart
+# echo "###################################################### ssh and system update confirmation done ########################################"
 
 # Installing Hadoop
 echo "###################################################### Starting Hadoop Installation ########################################"
 cd /home/hsk
-sudo wget https://archive.apache.org/dist/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
-tar -xvzf hadoop-3.3.1.tar.gz
+sudo wget -q --no-verbose --show-progress --progress=dot:mega https://archive.apache.org/dist/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
+tar -xzf hadoop-3.3.1.tar.gz
 mv hadoop-3.3.1/ hadoop
 rm hadoop-3.3.1.tar.gz
 
