@@ -1,7 +1,9 @@
 #!/bin/bash
 # Starting standalone Kafka
 
-echo "listeners=PLAINTEXT://localhost:9092" >> ./kafka/config/server.properties  
+while [[ "$( ps -ef | grep -i zookeeper | grep -v grep | wc -l | tr -d '\n' )" != 1 ]]; do 
+    /home/hsk/zookeeper/bin/zkServer.sh start
+    sleep 1
+done
 
-/home/hsk/zookeeper/bin/zkServer.sh start
 /home/hsk/kafka/bin/kafka-server-start.sh -daemon /home/hsk/kafka/config/server.properties
